@@ -1,0 +1,1 @@
+import test from"node:test";import assert from"node:assert/strict";import{clampMinutes}from"../src/domain/minutes.mjs";test("minutes stay in a useful range",()=>{assert.equal(clampMinutes(-2),0);assert.equal(clampMinutes(44.6),45);assert.equal(clampMinutes(900),480)});
