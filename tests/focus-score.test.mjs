@@ -1,0 +1,1 @@
+import test from"node:test";import assert from"node:assert/strict";import{focusScore}from"../src/domain/focus-score.mjs";test("score rewards completion and prices interruptions",()=>{assert.equal(focusScore({planned:50,completed:50,interruptions:0}),100);assert.equal(focusScore({planned:50,completed:25,interruptions:2}),38)});

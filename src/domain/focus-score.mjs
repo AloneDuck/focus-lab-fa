@@ -1,0 +1,1 @@
+import{clampMinutes}from"./minutes.mjs";export function focusScore({planned,completed,interruptions}){const plan=clampMinutes(planned);if(!plan)return 0;const completion=Math.min(1,clampMinutes(completed)/plan);const penalty=Math.min(.45,Math.max(0,interruptions)*.06);return Math.round(Math.max(0,completion-penalty)*100);}
