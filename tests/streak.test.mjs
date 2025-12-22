@@ -1,0 +1,1 @@
+import test from"node:test";import assert from"node:assert/strict";import{longestStreak}from"../src/domain/streak.mjs";test("streaks ignore duplicate days and stop at gaps",()=>assert.equal(longestStreak(["2025-11-01","2025-11-02","2025-11-02","2025-11-04"]),2));

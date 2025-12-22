@@ -1,0 +1,1 @@
+export function longestStreak(days){const sorted=[...new Set(days)].sort();let longest=0,current=0,previous=null;for(const day of sorted){const stamp=Date.parse(day+"T00:00:00Z");current=previous!==null&&stamp-previous===86400000?current+1:1;longest=Math.max(longest,current);previous=stamp;}return longest;}
