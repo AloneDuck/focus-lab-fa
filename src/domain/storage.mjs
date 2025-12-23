@@ -1,0 +1,1 @@
+const VERSION=1;export function encodeState(value){return JSON.stringify({version:VERSION,value});}export function decodeState(raw,fallback){try{const parsed=JSON.parse(raw);return parsed.version===VERSION?parsed.value:fallback;}catch{return fallback;}}

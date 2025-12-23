@@ -1,0 +1,1 @@
+import test from"node:test";import assert from"node:assert/strict";import{encodeState,decodeState}from"../src/domain/storage.mjs";test("storage codec rejects malformed and unknown versions",()=>{assert.deepEqual(decodeState(encodeState({a:1}),{}),{a:1});assert.deepEqual(decodeState("bad",{safe:true}),{safe:true})});
