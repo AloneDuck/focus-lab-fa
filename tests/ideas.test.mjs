@@ -1,0 +1,1 @@
+import test from"node:test";import assert from"node:assert/strict";import{rankIdeas}from"../src/domain/ideas.mjs";test("idea ranking balances impact and effort",()=>assert.equal(rankIdeas([{id:"a",impact:"medium",effort:4,createdAt:"2"},{id:"b",impact:"high",effort:2,createdAt:"1"}])[0].id,"b"));

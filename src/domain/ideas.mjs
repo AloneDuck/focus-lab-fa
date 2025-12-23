@@ -1,0 +1,1 @@
+const impact={low:1,medium:2,high:3};export function rankIdeas(ideas){return [...ideas].sort((a,b)=>(impact[b.impact]/Math.max(1,b.effort))-(impact[a.impact]/Math.max(1,a.effort))||a.createdAt.localeCompare(b.createdAt));}
