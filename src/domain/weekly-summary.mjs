@@ -1,0 +1,1 @@
+export function weeklySummary(sessions){return sessions.reduce((summary,session)=>({minutes:summary.minutes+session.minutes,completed:summary.completed+(session.completed?1:0),interruptions:summary.interruptions+session.interruptions}),{minutes:0,completed:0,interruptions:0});}

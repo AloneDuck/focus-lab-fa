@@ -1,0 +1,1 @@
+import test from"node:test";import assert from"node:assert/strict";import{weeklySummary}from"../src/domain/weekly-summary.mjs";test("weekly summaries aggregate outcomes",()=>assert.deepEqual(weeklySummary([{minutes:25,completed:true,interruptions:1},{minutes:40,completed:false,interruptions:2}]),{minutes:65,completed:1,interruptions:3}));
