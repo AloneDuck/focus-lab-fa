@@ -1,0 +1,1 @@
+import test from"node:test";import assert from"node:assert/strict";import{tehranDayKey}from"../src/domain/day-key.mjs";test("day keys follow Tehran midnight",()=>assert.equal(tehranDayKey(new Date("2025-11-01T21:00:00Z")),"2025-11-02"));
