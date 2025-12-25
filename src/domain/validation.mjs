@@ -1,0 +1,1 @@
+export function validateSession(input){const errors={};if(!input.title?.trim())errors.title="عنوان لازم است";if(input.minutes<5||input.minutes>180)errors.minutes="زمان باید بین ۵ تا ۱۸۰ دقیقه باشد";return{valid:Object.keys(errors).length===0,errors};}

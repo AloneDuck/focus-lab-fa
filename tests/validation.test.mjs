@@ -1,0 +1,1 @@
+import test from"node:test";import assert from"node:assert/strict";import{validateSession}from"../src/domain/validation.mjs";test("session validation returns field-level errors",()=>assert.deepEqual(Object.keys(validateSession({title:"",minutes:2}).errors),["title","minutes"]));
