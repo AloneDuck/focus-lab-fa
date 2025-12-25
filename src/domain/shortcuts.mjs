@@ -1,0 +1,1 @@
+export function shortcutFor(event){if(event.repeat||event.altKey)return null;if(event.key===" "&&!event.metaKey&&!event.ctrlKey)return"toggle";if((event.metaKey||event.ctrlKey)&&event.key.toLowerCase()==="k")return"new-idea";return null;}

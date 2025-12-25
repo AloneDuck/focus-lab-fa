@@ -1,0 +1,1 @@
+import test from"node:test";import assert from"node:assert/strict";import{shortcutFor}from"../src/domain/shortcuts.mjs";test("shortcuts ignore repeated and modified space keys",()=>{assert.equal(shortcutFor({key:" ",repeat:false,altKey:false,metaKey:false,ctrlKey:false}),"toggle");assert.equal(shortcutFor({key:" ",repeat:true,altKey:false}),null)});
